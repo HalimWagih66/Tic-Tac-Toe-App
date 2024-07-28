@@ -11,6 +11,13 @@ class TextThemeApp{
         fontWeight: FontWeight.w600
     );
   }
+  static font45Regular(Color color){
+    return TextStyle(
+        color: color,
+        fontSize: 30.sp,
+        fontFamily: 'XO2'
+    );
+  }
 }
 
 

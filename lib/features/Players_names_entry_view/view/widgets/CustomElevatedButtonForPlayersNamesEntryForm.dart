@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe_app/features/choose%20the%20board/view/choose_board_view.dart';
 
 class CustomElevatedButtonForPlayersNamesEntryForm extends StatelessWidget {
   const CustomElevatedButtonForPlayersNamesEntryForm({
@@ -19,7 +20,7 @@ class CustomElevatedButtonForPlayersNamesEntryForm extends StatelessWidget {
               elevation: 10
           ),
           onPressed: () {
-            //Navigator.pushNamed(context, ChooseBoardView.routeName);
+            Navigator.pushNamed(context, ChooseBoardView.routeName);
           },
           child: const Text(
             "START GAME",
