@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import 'package:tic_tac_toe_app/features/Players_names_entry_view/view/players_names_entry_view.dart';
+import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
 import 'features/splash screen/view/splash_screen_view.dart';
 
 class MyApplication extends StatelessWidget {
@@ -11,12 +14,16 @@ class MyApplication extends StatelessWidget {
       designSize: const Size(333.07, 675.35),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (context, child) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: {
-          SplashScreen.routeName:(context) => const SplashScreen(),
-        },
-        initialRoute: SplashScreen.routeName,
+      builder: (context, child) => Provider(
+        create: (BuildContext context) => PlayersNamesProvider(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          routes: {
+            SplashScreen.routeName:(context) => const SplashScreen(),
+            PlayersNamesEntryView.routeName:(context) => const PlayersNamesEntryView()
+          },
+          initialRoute: SplashScreen.routeName,
+        ),
       ),
     );
   }
