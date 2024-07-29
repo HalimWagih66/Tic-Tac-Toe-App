@@ -11,13 +11,9 @@ class CustomTextButtonForBoardChoose extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 77,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        border: Border.all(
-            width: 2,
-            color: color,
-            style: BorderStyle.solid),
+        border: Border.all(width: 2, color: color, style: BorderStyle.solid),
         borderRadius: BorderRadius.circular(25),
         color: Colors.black54,
       ),

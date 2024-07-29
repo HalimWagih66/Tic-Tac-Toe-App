@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe_app/features/choose%20the%20board/view/choose_board_view.dart';
 

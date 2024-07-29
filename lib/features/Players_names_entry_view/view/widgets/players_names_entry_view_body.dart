@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
 import 'players_names_entry_form.dart';
-import 'CustomElevatedButtonForPlayersNamesEntryForm.dart';
+import 'custom_elevated_button_for_players_names_entry_form.dart';
 class PlayersNamesEntryViewBody extends StatelessWidget {
   const PlayersNamesEntryViewBody({super.key});
 

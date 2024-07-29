@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
 
-import '../provider/players_names_provider.dart';
 
 class BoardHeader extends StatelessWidget {
   final int scorePlayer_1;
@@ -37,7 +37,7 @@ class BoardHeader extends StatelessWidget {
           ),
           Column(
             children: [
-              Text("${Provider.of<PlayersNamesProvider>(context).secondPlayerName} (O)",
+              Text("${Provider.of<PlayersNamesProvider>(context,listen: false).secondPlayerName} (O)",
                 style: const TextStyle(
                     color: Color(0xfffc0e85),
                     fontFamily: 'XO2',
