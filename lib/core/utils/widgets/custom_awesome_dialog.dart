@@ -20,9 +20,7 @@ Future customAwesomeDialog(
       dialogBackgroundColor: const Color(0xff075d8f),
       showCloseIcon: false,
       dismissOnTouchOutside: false,
-      btnCancelOnPress: btnCancelOnPress ?? () {
-
-      },
+      btnCancelOnPress: btnCancelOnPress,
       btnCancelText: btnCancelText,
       btnCancelColor: Colors.red,
       btnOkColor: Colors.green,

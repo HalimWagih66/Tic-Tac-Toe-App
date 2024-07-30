@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tic_tac_toe_app/core/utils/text_theme_app/text_theme_app.dart';
+import 'package:tic_tac_toe_app/features/board_screen/view/board_view.dart';
 
 
 class CustomTextButtonForBoardChoose extends StatelessWidget {
@@ -19,11 +21,7 @@ class CustomTextButtonForBoardChoose extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: () {
-          // Navigator.of(context).push(
-          //   MaterialPageRoute(
-          //     builder: (context) => const BoardView(counterButton: 3),
-          //   ),
-          // );
+          GoRouter.of(context).replace(BoardView.routeName,extra: itemCount);
         },
         child:  Text(
           "$itemCount      X      $itemCount",

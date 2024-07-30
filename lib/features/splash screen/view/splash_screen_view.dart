@@ -1,12 +1,13 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tic_tac_toe_app/features/Players_names_entry_view/view/players_names_entry_view.dart';
 import 'package:tic_tac_toe_app/features/splash%20screen/view/widgets/splash_screen_view_body.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
-  static const routeName = "SplashScreen";
+  static const routeName = "/";
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       const Duration(seconds: 4),
       () {
-        Navigator.of(context).pushReplacementNamed(PlayersNamesEntryView.routeName);
+        GoRouter.of(context).replace(PlayersNamesEntryView.routeName);
       },
     );
   }
