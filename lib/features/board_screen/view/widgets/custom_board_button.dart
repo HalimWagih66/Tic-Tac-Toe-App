@@ -21,10 +21,12 @@ class CustomBoardButton extends StatelessWidget {
       onPressed: boardViewModel.enabledButtons?() {
         Provider.of<BoardViewModel>(context,listen: false).onUserClick(position, context);
       }:null,
-      child: Stack(
-        children: [
-          Text(title, style: TextThemeApp.font30Regular( color: title == 'X' ? const Color(0xff0075fb) : const Color(0xfffc0e85), title: title)),
-        ],
+      child: FittedBox(
+        child: Stack(
+          children: [
+            Text(title, style: TextThemeApp.font30Regular( color: title == 'X' ? const Color(0xff0075fb) : const Color(0xfffc0e85), title: title)),
+          ],
+        ),
       ),
     );
   }
