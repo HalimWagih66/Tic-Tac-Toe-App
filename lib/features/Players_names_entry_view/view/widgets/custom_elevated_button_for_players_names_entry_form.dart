@@ -17,8 +17,8 @@ class CustomElevatedButtonForPlayersNamesEntryForm extends StatelessWidget {
       child: SizedBox(
         width: double.infinity,
         child: CustomElevatedButton(title: "Start Game",onPressed: (){
-          GoRouter.of(context).push(ChooseBoardView.routeName);
           checkInputsValidates(context);
+          GoRouter.of(context).push(ChooseBoardView.routeName);
         })
       ),
     );
