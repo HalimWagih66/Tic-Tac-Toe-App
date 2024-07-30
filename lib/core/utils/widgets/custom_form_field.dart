@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 
 class CustomFormField extends StatelessWidget {
-  const CustomFormField({super.key, required this.labelText, required this.prefixText, required this.prefixTextColor,required this.onSaved, required this.textInputAction});
+  const CustomFormField({super.key, required this.labelText, required this.prefixText, required this.prefixTextColor,required this.onChanged, required this.textInputAction});
   final String labelText;
   final String prefixText;
   final TextInputAction textInputAction;
   final Color prefixTextColor;
-  final void Function(String?) onSaved;
+  final void Function(String?) onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      onSaved: (newValue) {
-        onSaved(newValue);
+      onChanged: (newValue) {
+        onChanged(newValue);
       },
       style: const TextStyle(color: Color(0xdb06d2f7),fontFamily: "XO2",fontSize:20),
       keyboardType: TextInputType.name,
