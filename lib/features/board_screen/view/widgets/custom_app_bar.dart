@@ -16,8 +16,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
       leading: IconButton(
         onPressed: () {
           GoRouter.of(context).replace(PlayersNamesEntryView.routeName);
-          Provider.of<PlayersNamesProvider>(context, listen: false).firstPlayerName = "";
-          Provider.of<PlayersNamesProvider>(context, listen: false).secondPlayerName = "";
+          Provider.of<PlayersNamesProvider>(context, listen: false).firstPlayerName = null;
+          Provider.of<PlayersNamesProvider>(context, listen: false).secondPlayerName = null;
         },
         icon: const Icon(
           Icons.arrow_back_ios,
