@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
+import 'package:tic_tac_toe_app/core/utils/widgets/custom_elevated_Button.dart';
 import 'package:tic_tac_toe_app/features/choose%20the%20board/view/choose_board_view.dart';
 import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
 
@@ -15,21 +16,10 @@ class CustomElevatedButtonForPlayersNamesEntryForm extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       child: SizedBox(
         width: double.infinity,
-        child: ElevatedButton(
-          style:ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 30,vertical:15),
-              backgroundColor: const Color(0xD50099cb),
-              elevation: 10
-          ),
-          onPressed: () {
-            GoRouter.of(context).push(ChooseBoardView.routeName);
-            checkInputsValidates(context);
-          },
-          child: const Text(
-            "START GAME",
-            style: TextStyle(color: Colors.white, fontSize: 20),
-          ),
-        ),
+        child: CustomElevatedButton(title: "Start Game",onPressed: (){
+          GoRouter.of(context).push(ChooseBoardView.routeName);
+          checkInputsValidates(context);
+        })
       ),
     );
   }

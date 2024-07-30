@@ -13,17 +13,10 @@ class SplashScreenViewBody extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Welcome",
-            style: TextThemeApp.font68Bold(const Color(0xfff7017f)),
-          ),
+          Text("Welcome", style: TextThemeApp.font68Bold(const Color(0xfff7017f)),),
           Text("to", style: TextThemeApp.font68Bold(const Color(0xfff7017f))),
-          Text(
-            "the game",
-            style: TextThemeApp.font68Bold(const Color(0xff7b56c7)),
-          ),
-          Text(
-              "Tic Tak Toe", style: TextThemeApp.font68Bold(const Color(0xff0371fc)),textAlign: TextAlign.center,
-          )
+          Text("the game", style: TextThemeApp.font68Bold(const Color(0xff7b56c7)),),
+          Text("Tic Tak Toe", style: TextThemeApp.font68Bold(const Color(0xff0371fc)),textAlign: TextAlign.center,)
         ],
       ),
     );

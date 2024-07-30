@@ -39,4 +39,5 @@ class TextThemeApp {
         fontWeight: FontWeight.w400
     );
   }
+
 }
