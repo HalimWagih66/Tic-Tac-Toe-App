@@ -3,7 +3,7 @@ import 'package:tic_tac_toe_app/features/choose%20the%20board/view/widgets/choos
 
 class ChooseBoardView extends StatelessWidget {
     const ChooseBoardView({super.key});
-  static const routeName = "Choose_board";
+  static const routeName = "/Choose_board";
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

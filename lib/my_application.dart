@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:tic_tac_toe_app/features/Players_names_entry_view/view/players_names_entry_view.dart';
-import 'package:tic_tac_toe_app/features/choose%20the%20board/view/choose_board_view.dart';
+import 'package:tic_tac_toe_app/core/utils/app_router.dart';
 import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
-import 'features/splash screen/view/splash_screen_view.dart';
 
 class MyApplication extends StatelessWidget {
   const MyApplication({super.key});
@@ -17,14 +15,9 @@ class MyApplication extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) => Provider(
         create: (BuildContext context) => PlayersNamesProvider(),
-        child: MaterialApp(
+        child: MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          routes: {
-            SplashScreen.routeName:(context) => const SplashScreen(),
-            PlayersNamesEntryView.routeName:(context) => const PlayersNamesEntryView(),
-            ChooseBoardView.routeName:(context) => const ChooseBoardView()
-          },
-          initialRoute: SplashScreen.routeName,
+          routerConfig: AppRouter.router,
         ),
       ),
     );

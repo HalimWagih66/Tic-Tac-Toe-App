@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tic_tac_toe_app/core/utils/text_theme_app/text_theme_app.dart';
 import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
 
 
@@ -18,40 +19,19 @@ class BoardHeader extends StatelessWidget {
           Column(
             children: [
               Text("${Provider.of<PlayersNamesProvider>(context).firstPlayerName} (X)",
-                style: const TextStyle(
-                    color: Color(0xff0075fb),
-                    fontFamily: 'XO2',
-                    fontSize: 26,
-                  fontWeight: FontWeight.w400
-                ),
+                style: TextThemeApp.font25Regular(const Color(0xff0075fb))
               ),
-              Text("Score : $scorePlayer_1",
-                style: const TextStyle(
-                    color: Color(0xff0075fb),
-                    fontFamily: 'XO2',
-                    fontSize: 26,
-                    fontWeight: FontWeight.w400
-                ),
+              Text("Score : $scorePlayer_1", style: TextThemeApp.font25Regular(const Color(0xff0075fb))
               )
             ],
           ),
           Column(
             children: [
               Text("${Provider.of<PlayersNamesProvider>(context,listen: false).secondPlayerName} (O)",
-                style: const TextStyle(
-                    color: Color(0xfffc0e85),
-                    fontFamily: 'XO2',
-                    fontSize: 26,
-                    fontWeight: FontWeight.w400
-                ),
+                style: TextThemeApp.font25Regular(const Color(0xfffc0e85))
               ),
               Text("Score : $scorePlayer_2",
-                style: const TextStyle(
-                    color: Color(0xfffc0e85),
-                    fontFamily: 'XO2',
-                    fontSize: 26,
-                    fontWeight: FontWeight.w400
-                ),
+                style: TextThemeApp.font25Regular(const Color(0xfffc0e85))
               )
             ],
           ),

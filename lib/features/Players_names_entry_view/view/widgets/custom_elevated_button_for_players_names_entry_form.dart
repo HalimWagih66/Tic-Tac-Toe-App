@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:tic_tac_toe_app/features/choose%20the%20board/view/choose_board_view.dart';
 import 'package:tic_tac_toe_app/features/provider/players_names_provider.dart';
@@ -21,7 +22,7 @@ class CustomElevatedButtonForPlayersNamesEntryForm extends StatelessWidget {
               elevation: 10
           ),
           onPressed: () {
-            Navigator.pushNamed(context, ChooseBoardView.routeName);
+            GoRouter.of(context).push(ChooseBoardView.routeName);
             checkInputsValidates(context);
           },
           child: const Text(
