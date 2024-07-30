@@ -13,7 +13,8 @@ class PlayersNamesEntryForm extends StatelessWidget {
         CustomFormField(
           textInputAction: TextInputAction.next,
           prefixText: "X",
-          labelText: "Player One", prefixTextColor: const Color(0xffe41c58), onSaved: (String? input) {
+          labelText: "Player One", prefixTextColor: const Color(0xffe41c58),
+          onChanged: (String? input) {
           Provider.of<PlayersNamesProvider>(context,listen: false).firstPlayerName = input;
         },
         ),
@@ -23,8 +24,8 @@ class PlayersNamesEntryForm extends StatelessWidget {
           prefixText: "O",
           prefixTextColor: const Color(0xfffcd034),
           labelText: "Player Two",
-          onSaved: (String? input) {
-          Provider.of<PlayersNamesProvider>(context,listen: false).firstPlayerName = input;
+          onChanged: (String? input) {
+          Provider.of<PlayersNamesProvider>(context,listen: false).secondPlayerName = input;
         },
         ),
       ],
